@@ -30,9 +30,14 @@ namespace ADOdemo
             cmd.Parameters.Add("@p2", user);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
-            while(reader.Read())
+            if (reader.HasRows != true)
+                Console.WriteLine("No data in the table");
+            else
             {
-                Console.WriteLine(reader[0] + "\t" + reader[1]);
+                while (reader.Read())
+                {
+                    Console.WriteLine(reader[0] + "\t" + reader[1]);
+                }
             }
             con.Close();
             //int cnt = cmd.ExecuteNonQuery();
