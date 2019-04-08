@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "readingasxml", "readingasxm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "assignment", "assignment\assignment.csproj", "{DBAF5F57-188B-4BF1-AD81-9412A0E6996F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "storedprocedure", "storedprocedure\storedprocedure.csproj", "{01C12E0A-31C8-4F33-BE2E-461CF37C17F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DBAF5F57-188B-4BF1-AD81-9412A0E6996F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBAF5F57-188B-4BF1-AD81-9412A0E6996F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBAF5F57-188B-4BF1-AD81-9412A0E6996F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C12E0A-31C8-4F33-BE2E-461CF37C17F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C12E0A-31C8-4F33-BE2E-461CF37C17F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C12E0A-31C8-4F33-BE2E-461CF37C17F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C12E0A-31C8-4F33-BE2E-461CF37C17F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
