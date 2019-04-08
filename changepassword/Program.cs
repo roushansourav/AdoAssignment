@@ -14,17 +14,23 @@ namespace storedprocedure
         {
             SqlConnection con = new SqlConnection(@"initial catalog=ADOdemo;data source=CGI-JAVA-055\CGI;integrated security=true;");
             con.Open();
-            Console.WriteLine("Enter user details:(username,password,age,city)");
+            Console.WriteLine("Enter user details:(username,password,new password)");
             string str = Console.ReadLine();
             string[] input = str.Split(',');
-            SqlCommand cmd = new SqlCommand("p2",con);
+            
+            SqlCommand cmd = new SqlCommand("resetpassword", con);
             cmd.Parameters.AddWithValue("@p1", input[0]);
             cmd.Parameters.AddWithValue("@p2", input[1]);
-            cmd.Parameters.AddWithValue("@p3", int.Parse(input[2]));
-            cmd.Parameters.AddWithValue("@p4", input[3]);
+            cmd.Parameters.AddWithValue("@p3", input[2]);
+            
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            Console.WriteLine("Procedure executed");
+            int cnt = cmd.ExecuteNonQuery();
+            if (cnt > 0)
+                Console.WriteLine("Password Updated");
+            else
+                Console.WriteLine("Username and Password Invalid");
+
+            
         }
     }
 }
